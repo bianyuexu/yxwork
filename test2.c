@@ -1,18 +1,17 @@
-#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
 
- int Max(int x, int y)
-{
-	if (x > y)
-		return x;
-	else
-		return y;
-}
 int main()
 {
-	int num1 = 10;
-    int num2 = 20;
-	int max = 0;
-	max= Max(num1, num2);
-	printf("max=%d\n", max);
+	int num = 0;
+	int count = 0;
+	scanf("%d", &num);
+	int i = 0;
+	for (i = 0; i < 32; i++)
+	{
+		if (1 == ((num >> i) & 1))
+			count++;
+	}
+	printf("%d\n", count);
 	return 0;
 }
